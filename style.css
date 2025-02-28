@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100..900&family=Poppins:wght@100..900&display=swap');
 
 * {
     margin: 0;
@@ -20,24 +19,31 @@ section {
 /* HEADER */
 
 .header {
-    padding: 20px 160px;
+    padding: 30px 160px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed; /* Mantém a navbar sempre fixa no topo */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
-    background: white; /* Fundo para não ficar transparente */
+    background: white; 
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.068);
-    z-index: 1000; /* Garante que fique acima dos outros elementos */
+    z-index: 1000; 
 }
 
 .logo {
+    display: flex;
+    align-items: center;
     font-family: "Exo 2", sans-serif;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: bolder;
     color: #0a0a0a;
+    transition: transform 0.2s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
 }
 
 .logo span {
@@ -47,13 +53,13 @@ section {
 
 .logo img {
     width: 32px;
+    margin-left: 8px;
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+    gap: 40px;
 }
 
 .navbar .nav-link {
@@ -61,7 +67,6 @@ section {
     font-size: 18px;
     font-weight: 500;
     color: #0a0a0a;
-    text-decoration: none;
     transition: color 0.3s ease, border-bottom 0.1s ease-in-out;
     padding-bottom: 5px;
 }
@@ -74,7 +79,7 @@ section {
 /* SECTION INICIO */
 
 #inicio {
-    margin-top: 120px;
+    margin-top: 250px;
     display: flex;
     justify-content: space-between;
 }
@@ -86,14 +91,14 @@ section {
 
 #inicio .intro {
     font-family: "Poppins", sans-serif;
-    font-size: 32px;
+    font-size: 48px;
     font-weight: 600;
     color: orangered;
 }
 
 #inicio .title-inicio {
     font-family: "Poppins", sans-serif;
-    font-size: 64px;
+    font-size: 84px;
     font-weight: 500;
     letter-spacing: 10px;
     color: #0a0a0a;
@@ -108,7 +113,7 @@ section {
 
 #inicio .description {
     font-family: "Exo 2", sans-serif;
-    font-size: 18px;
+    font-size: 28px;
     font-weight: 600;
     color: #0a0a0a;
 } 
@@ -120,8 +125,8 @@ section {
 }
 
 #inicio .socialmedia img {
-    width: 32px;
-    height: 32px;
+    width: 42px;
+    height: 42px;
     transition: transform 0.3s ease;
 }
 
@@ -130,7 +135,70 @@ section {
 }
 
 .imginicio {
-    height: 400px;
+    height: 500px;
     object-fit: cover;
     border-radius: 5px;
+}
+
+/* SECTION SOBRE */
+
+#sobre {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    text-align: right; 
+}
+
+.title-sobre {
+    font-family: "Poppins", sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: orangered;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.title-sobre::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100px;
+    height: 4px;
+    background-color: orangered;
+}
+
+.description-sobre {
+    font-family: "Poppins", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #0a0a0a;
+    text-align: right;
+}
+
+.btn {
+    font-family: "Poppins", sans-serif;
+    align-self: flex-end;
+    margin-top: 60px;
+    padding: 25px 60px;
+    border-radius: 50px;
+    font-size: 22px;
+    font-weight: 700;
+    background-color: orangered;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background-color: #0a0a0a;
 }
